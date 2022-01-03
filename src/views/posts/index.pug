@@ -1,0 +1,14 @@
+html 
+  include ../templates/head.pug
+  body 
+    .container
+      h1=title
+      a.btn.btn-primary(href="./create-post") CREATE
+    
+      .row.mt-3
+        .posts
+          each post in posts
+            a.title(href="./posts/"+post.id)=post.title
+            small=post.date
+            p=post.content
+            a.btn.btn-primary.btn-sm(href="./edit-post/"+post.id) EDIT

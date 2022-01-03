@@ -1,0 +1,13 @@
+html
+  include ../templates/head.pug
+    body 
+      h1=title+' POST'
+      form(method=method, action=action)
+        .form-group 
+          label Title:
+          input.form-control(name='title', placeholder='Post Title', type='text')
+        .form-group 
+          label Content:
+          textarea.form-control(name='content', placeholder='Post Content')
+        br
+        input.btn.btn-primary(type='submit', value='Submit')
